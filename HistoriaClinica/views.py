@@ -10,7 +10,7 @@ def historiaClinica_list(request):
     context = {
         'historiaClinica_list': historiaClinicas
     }
-    return render(request, 'historiaClinica/historiaClinicas.html', context)
+    return render(request, 'HistoriaClinica/historiaClinicas.html', context)
 
 def historiaClinica_create(request):
     if request.method == 'POST':
