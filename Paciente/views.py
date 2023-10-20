@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from .logic.paciente_logic import create_paciente, get_pacientes
+from django.views.decorators.csrf import ensure_csrf_cookie
 
 def Paciente_list(request):
     pacientes = get_pacientes()
@@ -12,7 +13,9 @@ def Paciente_list(request):
     }
     return render(request, 'Paciente/pacientes.html', context)
 
+@ensure_csrf_cookie
 def Paciente_create(request):
+
     if request.method == 'POST':
         form = PacienteForm(request.POST)
         if form.is_valid():

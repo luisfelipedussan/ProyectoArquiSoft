@@ -5,6 +5,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from .logic.logic_historiaClinica import create_historiaClinica, get_historiaClinicas
 from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.csrf import ensure_csrf_cookie
 
 def historiaClinica_list(request):
     historiaClinicas = get_historiaClinicas()
@@ -14,6 +15,7 @@ def historiaClinica_list(request):
     return render(request, 'HistoriaClinica/historiaClinicas.html', context)
 
 @csrf_exempt
+@ensure_csrf_cookie
 def historiaClinica_create(request):
     if request.method == 'POST':
         form = HistoriaClinicaForm(request.POST)
