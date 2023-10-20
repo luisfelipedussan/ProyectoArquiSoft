@@ -82,7 +82,7 @@ DATABASES = {
         'USER': 'felipedussan',
         'PASSWORD': 'Mara30600593',
         'HOST': '10.105.96.3', #EL QUE ME DE LA IP PRIVADA O PUBLICA?
-        'PORT': '5432'
+        'PORT': ''
     }
 }
 
