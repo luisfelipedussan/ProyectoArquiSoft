@@ -50,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'ProyectoArquiSoft.urls'
@@ -82,7 +83,7 @@ DATABASES = {
         'NAME': 'rasiMedical-db',
         'USER': 'felipedussan',
         'PASSWORD': 'Mara30600593',
-        'HOST': '10.105.96.3', #EL QUE ME DE LA IP PRIVADA O PUBLICA?
+        'HOST': '10.105.96.3', 
         'PORT': '5432'
     }
 }
