@@ -37,11 +37,8 @@
 
                         {% for historiaClinica in historiaClinica_list %}
                         <tr>
-                            <td>{{ measurement.paciente.name }}</td>
-                            <td>{{ measurement.value }}</td>
-                            <td>{{ measurement.unit }}</td>
-                            <td>{{ measurement.place }}</td>
-                            <td>{{ measurement.dateTime }}</td>
+                            <td>{{ HistoriaClinica.paciente.name }}</td>
+                            
                         </tr>
                         {% endfor %}
 
