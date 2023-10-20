@@ -26,16 +26,13 @@
                     <table class="table table-hover">
                         <thead>
                         <tr style="color:#0E2EB0">
-                            <th font color="red">Paciente</th>
-                            <th>Value</th>
-                            <th>Unit</th>
-                            <th>Place</th>
-                            <th>Date Time</th>
+                            <th font color="red">HistoriaClinica</th>
+                           
                         </tr>
                         </thead>
                         <tbody>
 
-                        {% for historiaClinica in historiaClinica_list %}
+                        {% for HistoriaClinica in historiaClinica_list %}
                         <tr>
                             <td>{{ HistoriaClinica.paciente.name }}</td>
                             
