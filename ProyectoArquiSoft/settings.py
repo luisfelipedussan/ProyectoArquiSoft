@@ -85,7 +85,17 @@ DATABASES = {
         'PASSWORD': 'Mara30600593',
         'HOST': '10.105.96.3', 
         'PORT': '5432'
-    }
+    },
+    'default2': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'rasiMedical-db',
+        'USER': 'felipedussan',
+        'PASSWORD': 'Mara30600593',
+        'HOST': '10.105.96.7', 
+        'PORT': '5432'
+    },
+    
+    
 }
 
 
