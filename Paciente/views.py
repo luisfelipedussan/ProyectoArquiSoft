@@ -5,14 +5,14 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from .logic.paciente_logic import create_paciente, get_pacientes
 
-def measurement_list(request):
+def Paciente_list(request):
     pacientes = get_pacientes()
     context = {
         'paciente_list': pacientes
     }
     return render(request, 'Paciente/pacientes.html', context)
 
-def measurement_create(request):
+def Paciente_create(request):
     if request.method == 'POST':
         form = PacienteForm(request.POST)
         if form.is_valid():
