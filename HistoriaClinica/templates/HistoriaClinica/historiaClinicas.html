@@ -28,7 +28,12 @@
                         <thead>
                         <tr style="color:#0E2EB0">
                             <th font color="red">HistoriaClinica</th>
-                           
+                            <th>Nombre</th>
+                            <th>Edad</th>
+                            <th>Sexo</th>
+                            <th>GrupoSanquineo</th>
+                            <th>EnfermedadPaciente</th>
+                        
                         </tr>
                         </thead>
                         <tbody>
@@ -36,7 +41,13 @@
                         {% for HistoriaClinica in historiaClinica_list %}
                         <tr>
                             <td>{{ HistoriaClinica.paciente.name }}</td>
-
+                            <td>{{ HistoriaClinica.paciente.edadPaciente}}</td>
+                            <td>{{ HistoriaClinica.paciente.sexoPaciente}}</td>
+                            <td>{{ HistoriaClinica.paciente.grupoSanguineoPaciente}}</td>
+                            <td>{{ HistoriaClinica. enfermedadPaciente}}</td>
+                           
+                            
+                            
                     
                             
                         </tr>
