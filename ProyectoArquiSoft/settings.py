@@ -80,10 +80,10 @@ WSGI_APPLICATION = 'ProyectoArquiSoft.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'rasiMedical-db',
-        'USER': 'felipedussan',
-        'PASSWORD': 'Mara30600593',
-        'HOST': '10.105.96.3', 
+        'NAME': 'monitoring_db',
+        'USER': 'monitoring_user',
+        'PASSWORD': 'isis2503',
+        'HOST': '10.50.240.3', 
         'PORT': '5432'
     },
    
