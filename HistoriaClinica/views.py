@@ -8,6 +8,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.csrf import ensure_csrf_cookie
 import logging
 
+logging.basicConfig(filename='app.log', level=logging.INFO)
 
 def historiaClinica_list(request):
     historiaClinicas = get_historiaClinicas()
@@ -24,6 +25,7 @@ def historiaClinica_create(request):
         if form.is_valid():
             create_historiaClinica(form)
             messages.add_message(request, messages.SUCCESS, 'historiaClinica create successful')
+            logging.info(f'La historiaClinica fue modificada: {request.url}')
             return HttpResponseRedirect(reverse('historiaClinicaCreate'))
         else:
             print(form.errors)
@@ -36,8 +38,4 @@ def historiaClinica_create(request):
 
     return render(request, 'historiaClinicaCreate.html', context)
 
-logging.basicConfig(level=logging.INFO)
 
-def index(request):
-    # Registra la información de la petición GET
-    logging.info(f'La historiaClinica fue modificada: {request.url}')
