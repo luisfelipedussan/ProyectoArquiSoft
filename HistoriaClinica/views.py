@@ -40,4 +40,4 @@ logging.basicConfig(level=logging.INFO)
 
 def index(request):
     # Registra la información de la petición GET
-    logging.info(f'La historia fue modificada: {request.url}')
+    logging.info(f'La historiaClinica fue modificada: {request.url}')
