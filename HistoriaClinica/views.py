@@ -6,6 +6,8 @@ from django.urls import reverse
 from .logic.logic_historiaClinica import create_historiaClinica, get_historiaClinicas
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.csrf import ensure_csrf_cookie
+import logging
+
 
 def historiaClinica_list(request):
     historiaClinicas = get_historiaClinicas()
@@ -33,3 +35,9 @@ def historiaClinica_create(request):
     }
 
     return render(request, 'HistoriaClinica/historiaClinicaCreate.html', context)
+
+logging.basicConfig(level=logging.INFO)
+
+def index(request):
+    # Registra la información de la petición GET
+    logging.info(f'La historia fue modificada: {request.url}')
