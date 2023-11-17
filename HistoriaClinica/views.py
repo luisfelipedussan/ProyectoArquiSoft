@@ -34,7 +34,7 @@ def historiaClinica_create(request):
         'form': form,
     }
 
-    return render(request, 'HistoriaClinica/historiaClinicaCreate.html', context)
+    return render(request, 'historiaClinicaCreate.html', context)
 
 logging.basicConfig(level=logging.INFO)
 
