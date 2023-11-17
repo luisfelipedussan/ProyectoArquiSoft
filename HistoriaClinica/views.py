@@ -30,4 +30,12 @@ def historiaClinica_create(request):
         else:
             print(form.errors)
     else:
-        for
+        form = HistoriaClinicaForm()
+
+    context = {
+        'form': form,
+    }
+
+    return render(request, 'historiaClinicaCreate.html', context)
+
+
