@@ -30,4 +30,16 @@ def historiaClinica_create(request):
             create_historiaClinica(form)
             messages.add_message(request, messages.SUCCESS, 'historiaClinica create successful')
             logging.info(f'La historiaClinica fue modificada: {request.url}')
-  
+            return HttpResponseRedirect(reverse('historiaClinicaCreate'))
+        else:
+            print(form.errors)
+    else:
+        form = HistoriaClinicaForm()
+
+    context = {
+        'form': form,
+    }
+
+    return render(request, 'historiaClinicaCreate.html', context)
+
+
