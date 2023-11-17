@@ -25,5 +25,3 @@ urlpatterns = [
     #path('', include('alarms.urls')),
     #path('health/', views.health_check, name='health'),
 ]
-
-#SI NO FUNCIONA , IMPLEMENTAR EL LOG ACÁ 
