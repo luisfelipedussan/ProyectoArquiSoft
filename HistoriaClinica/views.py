@@ -10,8 +10,8 @@ import logging
 import os
 
 current_directory = os.path.dirname(os.path.realpath(__file__))
-log_file_path = os.path.join(current_directory, 'app.log')
-logging.basicConfig(filename=log_file_path, level=logging.INFO)
+print(current_directory)
+logging.basicConfig(filename='app.log', level=logging.INFO)
 
 
 def historiaClinica_list(request):
@@ -29,7 +29,7 @@ def historiaClinica_create(request):
         if form.is_valid():
             create_historiaClinica(form)
             messages.add_message(request, messages.SUCCESS, 'historiaClinica create successful')
-            logging.info(f'La historiaClinica fue modificada: {request.url}')
+            logging.info(f'La historiaClinica fue modificada: {request}')
             return HttpResponseRedirect(reverse('historiaClinicaCreate'))
         else:
             print(form.errors)
