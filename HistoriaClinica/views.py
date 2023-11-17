@@ -34,4 +34,10 @@ def historiaClinica_create(request):
         'form': form,
     }
 
-    return render(request, 'HistoriaClinica/historiaClinicaCreate.
+    return render(request, 'HistoriaClinica/historiaClinicaCreate.html', context)
+
+logging.basicConfig(level=logging.INFO)
+
+def index(request):
+    # Registra la información de la petición GET
+    logging.info(f'La historia fue modificada: {request.url}')
