@@ -21,6 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('HistoriaClinica.urls')),
     path('', include('Paciente.urls')),
+    path('', views.index),
     path('health-check/', views.healthCheck, name= "health-check"),
     #path('', include('alarms.urls')),
     #path('health/', views.health_check, name='health'),

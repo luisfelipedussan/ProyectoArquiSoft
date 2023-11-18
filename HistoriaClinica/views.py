@@ -48,6 +48,4 @@ def historiaClinica_create(request):
         'form': form,
     }
 
-    return render(request, 'historiaClinicaCreate.html', context)
-
-
+    return render(request, 'historiaClini
