@@ -36,7 +36,7 @@ def historiaClinica_create(request):
             fecha_hora_actual = datetime.now()
 
             # Registrar la información en el archivo de log
-            logging.info(f'Usuario: {usuario}, Hora: {fecha_hora_actual}, Nueva historia clínica creada: {request.url}')
+            logging.info(f'Usuario: {usuario}, Hora: {fecha_hora_actual}, Nueva historia clínica creada')
 
             return HttpResponseRedirect(reverse('historiaClinicaCreate'))
         else:
