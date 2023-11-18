@@ -6,6 +6,7 @@ from django.urls import reverse
 from .logic.logic_historiaClinica import create_historiaClinica, get_historiaClinicas
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.csrf import ensure_csrf_cookie
+from datetime import datetime
 import logging
 import os
 
@@ -29,7 +30,14 @@ def historiaClinica_create(request):
         if form.is_valid():
             create_historiaClinica(form)
             messages.add_message(request, messages.SUCCESS, 'historiaClinica create successful')
-            logging.info(f'La historiaClinica fue creada/modificada por : {request.session}')
+            usuario = request.user if request.user.is_authenticated else None
+
+            # Obtener la fecha y hora actual
+            fecha_hora_actual = datetime.now()
+
+            # Registrar la información en el archivo de log
+            logging.info(f'Usuario: {usuario}, Hora: {fecha_hora_actual}, Nueva historia clínica creada: {request.url}')
+
             return HttpResponseRedirect(reverse('historiaClinicaCreate'))
         else:
             print(form.errors)
