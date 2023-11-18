@@ -29,7 +29,7 @@ def historiaClinica_create(request):
         if form.is_valid():
             create_historiaClinica(form)
             messages.add_message(request, messages.SUCCESS, 'historiaClinica create successful')
-            logging.info(f'La historiaClinica fue modificada: {request}')
+            logging.info(f'La historiaClinica fue creada/modificada por : {request.session}')
             return HttpResponseRedirect(reverse('historiaClinicaCreate'))
         else:
             print(form.errors)
