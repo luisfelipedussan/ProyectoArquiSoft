@@ -10,7 +10,7 @@ from datetime import datetime
 import logging
 import os
 from django.contrib.auth.decorators import login_required
-from monitoring.auth0backend import getRole
+from ProyectoArquiSoft.auth0backend import getRole
 
 current_directory = os.path.dirname(os.path.realpath(__file__))
 print(current_directory)
