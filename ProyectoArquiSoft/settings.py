@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'HistoriaClinica',
     'Paciente',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -138,3 +139,24 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOW_CREDENTIALS = True
 
 CSRF_COOKIE_HTTPONLY = True
+
+LOGIN_URL = "/login/auth0"
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "https://dev-diurtojjc445wrr3.us.auth0.com/v2/logout?returnTo=http%3A%2F%2F35.202.153.89:8080"
+
+SOCIAL_AUTH_TRAILING_SLASH = False  # Remove end slash from routes
+SOCIAL_AUTH_AUTH0_DOMAIN = 'dev-diurtojjc445wrr3.us.auth0.com'
+SOCIAL_AUTH_AUTH0_KEY = 'OicclHzRlhtuHfhgg2yTxzU0iBrkfnTN'
+SOCIAL_AUTH_AUTH0_SECRET = '0k1tY2-aFAvF600oTPW7gQ92xh4neZhc5qSNghw35S8oKU9UhlOp37bi4QrAgJyb'
+
+SOCIAL_AUTH_AUTH0_SCOPE = [
+    'openid',
+    'profile',
+    'email',
+    'role',
+]
+
+AUTHENTICATION_BACKENDS = {
+    'monitoring.auth0backend.Auth0',
+    'django.contrib.auth.backends.ModelBackend',
+}

@@ -25,6 +25,9 @@ urlpatterns = [
     path('health-check/', views.healthCheck, name= "health-check"),
     #path('', include('alarms.urls')),
     #path('health/', views.health_check, name='health'),
+    path(r'', include('django.contrib.auth.urls')),
+    path(r'', include('social_django.urls')),
+
 ]
 
 #SI NO FUNCIONA , IMPLEMENTAR EL LOG ACÁ 
