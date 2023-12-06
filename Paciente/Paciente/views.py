@@ -4,7 +4,7 @@ from .forms import PacienteForm
 from django.contrib import messages
 from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
-from logic.paciente_logic import get_pacientes,create_paciente
+from .paciente_logic import get_pacientes,create_paciente
 from django.views.decorators.csrf import ensure_csrf_cookie
 from django.contrib.auth.decorators import login_required
 from ProyectoArquiSoft.auth0backend import getRole
