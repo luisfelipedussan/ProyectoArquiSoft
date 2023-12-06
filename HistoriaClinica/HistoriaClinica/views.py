@@ -3,7 +3,7 @@ from .forms import HistoriaClinicaForm
 from django.contrib import messages
 from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
-from .logic.logic_historiaClinica import create_historiaClinica, get_historiaClinicas
+from .logic_historiaClinica import create_historiaClinica, get_historiaClinicas
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.csrf import ensure_csrf_cookie
 from datetime import datetime

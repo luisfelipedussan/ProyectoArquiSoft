@@ -9,6 +9,7 @@ from django.views.decorators.csrf import ensure_csrf_cookie
 from django.contrib.auth.decorators import login_required
 from .auth0backend import getRole
 
+
 @login_required
 def Paciente_list(request):
 
