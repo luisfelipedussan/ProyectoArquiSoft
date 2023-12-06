@@ -1,0 +1,23 @@
+{
+    "paciente": 1,
+    "documentoProfesionalConsulta": 12345,
+    "nombreProfesionalConsulta": "Dr. Profesional",
+    "fechaHoraAtencionConsulta": "2023-12-06T10:30:00",
+    "servicioConsulta": "Servicio de Consulta",
+    "motivoConsulta": "Descripción del motivo de la consulta.",
+    "enfermedadPaciente": "Descripción de la enfermedad del paciente.",
+    "diagnosticoPaciente": "Diagnóstico del paciente.",
+    "antecedentesPersonalesPaciente": "Antecedentes personales del paciente.",
+    "antecedentesFamiliaresPaciente": "Antecedentes familiares del paciente.",
+    "antecedentesFarmacologicosPaciente": "Antecedentes farmacológicos del paciente.",
+    "alergiasPaciente": "Alergias del paciente.",
+    "vacunasPaciente": "Vacunas aplicadas al paciente.",
+    "examenFisicoPaciente": "Resultados del examen físico del paciente.",
+    "signosVitalesPaciente": "Signos vitales del paciente.",
+    "ordenesMedicasPaciente": "Órdenes médicas para el paciente.",
+    "incapacidadMedicaPaciente": "Incapacidad médica del paciente.",
+    "notaSeguimientoPaciente": "Notas de seguimiento del paciente.",
+    "motivoAtencionFallidaPaciente": "Motivo de atención fallida del paciente.",
+    "condicionEgresoPaciente": "Condición de egreso del paciente"
+  }
+  
