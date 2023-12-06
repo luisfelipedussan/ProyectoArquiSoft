@@ -1,6 +1,6 @@
 from django.shortcuts import render
 # Paciente/views.py
-from Paciente.forms import PacienteForm
+from forms import PacienteForm
 from django.contrib import messages
 from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
